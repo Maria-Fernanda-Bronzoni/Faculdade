@@ -1,0 +1,60 @@
+<!-- Página de Contato -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato - Maria Fernanda Bronzoni</title>
+
+    <!-- Link para o CSS específico da página de contato -->
+    <link rel="stylesheet" href="stylesPages/styleContato.css" />
+
+    <!-- Script JS (se tiver algo extra no comportamento da página) -->
+    <script src="js/script.js"></script>
+  </head>
+
+  <body>
+    <!-- Cabeçalho com meu nome e navegação entre as páginas -->
+    <header>
+      <h1 class="mainTitle">Maria Fernanda Bronzoni</h1>
+      <nav>
+        <a class="navLink" href="index.html">Sobre mim</a>
+        <a class="navLink" href="formacao.html">Formação</a>
+        <a class="navLink" href="portfolio.html">Portfólio</a>
+        <a class="navLink" href="contato.html">Contato</a>
+      </nav>
+    </header>
+
+    <!-- Conteúdo principal da página de contato -->
+    <main>
+      <h2 class="sectionTitle">Fale comigo</h2>
+      <p class="sectionDescription">
+        Estou sempre aberta a novos projetos, ideias ou só para trocar uma ideia sobre tecnologia!
+      </p>
+
+      <!-- Formulário para envio de mensagem por e-mail -->
+      <form class="contactForm" action="mailto:nandabronzoni67i@email.com" method="POST" enctype="text/plain">
+        <!-- Campo para o nome do visitante -->
+        <label for="nome">Seu nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required />
+
+        <!-- Campo para o e-mail do visitante -->
+        <label for="email">Seu e-mail</label>
+        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required />
+
+        <!-- Campo para a mensagem -->
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui..." rows="5" required></textarea>
+
+        <!-- Botão para enviar o formulário -->
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>&copy; 2025 Maria Fernanda Bronzoni. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>

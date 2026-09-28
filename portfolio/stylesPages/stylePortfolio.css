@@ -1,0 +1,265 @@
+/* Zerando margens e paddings para ter mais controle do layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(120deg, #6a82fb 0%, #fc5c7d 100%);
+  color: #fff;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Estilização do cabeçalho  */
+header {
+  background: #3a2c5c;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0 1.2rem 0;
+  box-shadow: 0 2px 8px rgba(106, 130, 251, 0.15);
+  letter-spacing: 1px;
+}
+
+.mainTitle {
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fc5c7d;
+  margin-bottom: 0.5rem;
+}
+
+/* Menu com os links das páginas */
+nav {
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+/* Estilo de cada link no menu */
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1.3rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 2px 8px rgba(106, 130, 251, 0.15);
+  transition: background 0.3s, color 0.3s, font-size 0.3s, box-shadow 0.3s;
+}
+
+.navLink:hover,
+.navLink:focus {
+  color: #fc5c7d;
+  background: linear-gradient(90deg, #fc5c7d, #6a82fb);
+  font-weight: 700;
+  font-size: 1.15rem;
+  box-shadow: 0 4px 16px rgba(252, 92, 125, 0.18);
+  outline: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Contorno quando o link recebe foco */
+.navLink:focus {
+  outline: 2px solid #fc5c7d;
+  outline-offset: 3px;
+}
+
+/* Bloco principal da página onde fica o conteúdo */
+main {
+  max-width: 800px;
+  margin: 3.5rem auto 4rem auto;
+  background: rgba(58, 44, 92, 0.10);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(106, 130, 251, 0.07);
+  padding: 2.5rem 2rem;
+}
+
+/* Títulos e subtítulos com aquele efeito legal */
+.sectionTitle,
+.sectionListTitle,
+.sectionSubtitle {
+  color: #ffd86b;
+  border-radius: 10px;
+  background-color: #2a2040;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 8px rgba(106, 130, 251, 0.15);
+  position: relative;
+  transition: background 0.3s, color 0.3s, font-size 0.3s, box-shadow 0.3s;
+  margin-bottom: 1.2rem;
+}
+
+/* Tamanhos diferentes pra cada tipo de título */
+.sectionTitle {
+  font-size: 1.9rem;
+}
+
+.sectionListTitle {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+/* Aquele cursor piscando de terminal nos títulos */
+.sectionTitle::after,
+.sectionListTitle::after {
+  display: inline-block;
+  width: 0.1ch;
+  height: 1.2em;
+  background: #a685ff;
+  margin-left: 5px;
+  content: "";
+  animation: blink 1s steps(1) infinite;
+}
+
+/* Animação do cursor piscando */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Parágrafo com a introdução de cada página */
+.sectionDescription {
+  color: #e0d7f7;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  background-color: #3a2c5c;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 8px rgba(106, 130, 251, 0.15);
+  transition: background 0.8s, color 0.8s, font-size 0.8s, box-shadow 0.8s;
+}
+
+/* Quando passa o mouse no parágrafo de descrição */
+.sectionDescription:hover {
+  background: linear-gradient(90deg, #fc5c7d, #6a82fb);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.12rem;
+  box-shadow: 0 4px 16px rgba(252, 92, 125, 0.18);
+}
+
+/* Lista com ícones e textos (ex: hobbies, localização, etc) */
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.2rem 2rem;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+  align-items: stretch; /* Deixa os quadradinhos nivelados */
+}
+
+/* Cada item da lista com fundo e efeitos */
+.infoGrid li {
+  background: rgba(58, 44, 92, 0.18);
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(106, 130, 251, 0.10);
+  padding: 1.1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.08rem;
+  color: #fff;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  height: 100%;
+  min-height: 120px;
+  align-self: stretch;
+}
+
+/* Efeito quando passa o mouse em cima de um item */
+.infoGrid li:hover {
+  background: linear-gradient(90deg, #6a82fb 60%, #fc5c7d 100%);
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(252, 92, 125, 0.18);
+  transform: translateY(-3px) scale(1.03);
+}
+
+/* Ícone dentro do item (tipo um emoji ou SVG) */
+.infoIcon {
+  font-size: 1.6rem;
+  margin-right: 0.5rem;
+  filter: drop-shadow(0 1px 2px #ffffff33);
+}
+
+/* Rótulo que vem antes da informação (tipo 'Cidade:') */
+.infoLabel {
+  font-weight: 600;
+  color: #ffd86b;
+  margin-right: 0.3rem;
+}
+
+/* Valor que aparece ao lado do rótulo (tipo 'Macaé') */
+.infoValue {
+  font-weight: 500;
+  background: linear-gradient(90deg, #ffd86b, #ffffff);
+  -webkit-background-clip: text;
+  background-clip:text ; /*  Para aplicar o gradiente só dentro do texto*/
+  -webkit-text-fill-color: transparent;
+}
+
+/* Repetição da estilização do item da lista com cor diferente */
+.infoGrid li {
+  background-color: #3a2c5c;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(106, 130, 251, 0.15);
+  padding: 1.1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.08rem;
+  color: #fff;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+}
+
+/* Rodapé simples no final da página */
+footer {
+  background: #3a2c5c;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  opacity: 0.95;
+  box-shadow: 0 -2px 8px rgba(106, 130, 251, 0.08);
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+  main {
+    padding: 1.5rem 1rem;
+  }
+
+  .navLink {
+    font-size: 0.95rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .sectionTitle,
+  .sectionListTitle,
+  .sectionSubtitle {
+    font-size: 1.2rem;
+  }
+
+  .sectionDescription,
+  .infoGrid {
+    font-size: 1rem;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr;
+  }
+}
